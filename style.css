@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;700&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  max-width: 2000px;
+  margin: auto;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eaeaea;
+  height: 50px;
+  box-shadow: inset 0em 0.3em 0.4rem #cfcfcf;
+}
+.form__input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form__input input {
+  border: none;
+  font-size: 0.875rem; /*14px*/
+  color: #4b4b4b;
+  background-color: #eaeaea;
+  font-weight: bold;
+  width: 133px;
+  height: 36%;
+}
+.form__icon {
+  margin-right: 17px;
+}
+.form__icon p {
+  font-size: 1.25rem; /*20px*/
+}
+
+.logo {
+  width: 100%;
+  height: 65px;
+  padding-top: 21px;
+  padding-bottom: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo img {
+  width: 166px;
+  height: 31px;
+  /*width: 45%;
+  height: 86%;*/
+}
+
+.discover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background-color: #f6f6f6;
+  padding-top: 41px;
+  padding-bottom: 57px;
+}
+.discover a {
+  text-decoration: none;
+  color: white;
+}
+.discover h1 {
+  margin: 0px;
+}
+.discover__btn {
+  width: 218px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  border-radius: 25px;
+}
+
+.function {
+  padding-top: 30px;
+  padding-bottom: 50px;
+  margin-left: 5.3%;
+  margin-right: 5.3%;
+}
+.function h1 {
+  margin-right: 3%;
+}
+.function__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+@media (max-width: 765px) {
+  .function__list {
+    margin-left: -8%;
+    flex-direction: column;
+  }
+}
+.function__list__type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 3%;
+}
+.function__list__type > p {
+  text-align: center;
+  color: white;
+  position: relative;
+  left: 14px;
+  padding: 7px 11px;
+  border-radius: 21px;
+  background-color: #9356DC;
+}
+.function__list__type__name-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  padding-top: 32px;
+  padding-bottom: 25px;
+  background-color: #f6f6f6;
+  border-radius: 16px;
+  box-shadow: 5px 5px 20px #e6e6e6;
+}
+.function__list__type__name-icon span {
+  color: #7e7e7e;
+  padding-right: 25px;
+  padding-left: 34px;
+}
+.function__list__type__name-icon p {
+  width: 250px;
+  font-weight: bold;
+  margin: 0px;
+}
+
+.resto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f6f6f6;
+  padding-top: 37px;
+  padding-bottom: 64px;
+}
+.resto a {
+  text-decoration: none;
+  color: black;
+}
+.resto__title {
+  width: 100%;
+  margin-left: 10%;
+}
+.resto__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.resto__list__type {
+  background-color: white;
+  width: 45%;
+  margin: 18px;
+  border-radius: 15px;
+}
+@media (max-width: 765px) {
+  .resto__list__type {
+    width: 85%;
+  }
+}
+.resto__list__type__img {
+  position: relative;
+}
+.resto__list__type__img p {
+  position: absolute;
+  z-index: 2;
+  background-color: #99e2d0;
+  color: #008766;
+  left: 70%;
+  top: 0px;
+  padding: 9px 12px 8px 12px;
+  border-radius: 2px;
+}
+.resto__list__type__info {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 6.9%;
+  padding-left: 3.9%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.resto__list__type__info__title p {
+  margin: 7px;
+}
+.resto__list__type__info__title__name p {
+  font-weight: bolder;
+}
+.resto__list__type__info__like {
+  position: relative;
+}
+.resto__list__type__info__like span {
+  position: absolute;
+  z-index: 2;
+  top: 23.5px;
+  font-size: 23px;
+  color: transparent;
+}
+.resto__list__type__info__like span :hover {
+  color: #9356DC;
+}
+.resto__list__type__info__like p {
+  font-size: 23px;
+}
+.resto img {
+  /*width: 336px;*/
+  width: 100%;
+  height: 177px;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+/*# sourceMappingURL=style.css.map */
