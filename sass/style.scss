@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap');
 *
 {
     box-sizing: border-box;
@@ -28,7 +29,9 @@ body
 header{
     display: flex;
     flex-direction: column; 
+   
 }
+
 .form{
     @include flex-centre;
     background-color: #eaeaea;
@@ -88,142 +91,172 @@ $color-tertiary: #99E2D0;
     
     }
 }
-.function{
-    @include padding-top-bottom(function);
-    margin-left: 5.3%;
-    margin-right: 5.3%; 
-    h1{
-        margin-right: 3%;
-    }
-    &__list{ 
-        @include flex-centre;
-        flex-direction: row;
-        flex-wrap: wrap;
-        @media (max-width:765px) {
-            margin-left: -8%;
-            flex-direction: column;
-       }
-       &__type{
-        @include flex-centre;
-        margin-right: 3%;
-        > p{
-            text-align: center;
-            color: white;
-            position:relative;
-            left:14px;
-            padding: 7px 11px;
-            border-radius: 21px;
-            background-color: $color-primary;
-        }
-        &__name-icon{
-            @include flex-centre;
-            margin-top: 12px;
-            margin-bottom: 12px;
-            @include padding-top-bottom(type); 
-            background-color: #f6f6f6;
-            border-radius: 16px;
-            box-shadow: 5px 5px 20px #e6e6e6;
-            span{
-                color:#7e7e7e;
-                padding-right: 25px;
-                padding-left: 34px;
-            }
-            p{
-                width: 250px;
-                font-weight: bold;
-                margin:0px;
-            }
-        }
-    }
-    }
-    
-}
-.resto{
-    a{
-        text-decoration: none;
-        color:black;
-    }
+.blocF{
     @include flex-centre;
-    flex-direction: column;
-    background-color: #f6f6f6;
-    @include padding-top-bottom (resto);
-    &__title{
-       width: 100%;
-       margin-left: 10%;
-      
-    }
-    &__list{
-        display:flex;
-        flex-wrap: wrap;
-        justify-content: center;
-
+    &__function{
+        width: 1200px;
+    
+        @include padding-top-bottom(function);
+        @media (max-width:991px){
+            width: 100%;
+            
+        }
+        &__title{
+            margin: 0px;
+            width: 100%;
+            padding-left: 7%;
+        }
+        &__list{ 
+            @include flex-centre;
+            flex-direction: row;
+            flex-wrap: wrap;
+            @media (max-width:765px) {
+                /*margin-left: -8%;*/
+                flex-direction: column;
+            }
         &__type{
-            background-color: white;
-            width: 45%;
-            margin: 18px;
-            border-radius: 15px;
-            @media (max-width:765px){
+            @include flex-centre;
+    
+            @media (max-width:765px) {
                 width: 85%;
-                
             }
-            &__img{
-                position: relative;
+            > p{
+                text-align: center;
+                color: white;
+                position:relative;
+                left:14px;
+                padding: 7px 11px;
+                border-radius: 21px;
+                background-color: $color-primary;
             }
-
-            &__img p{
-            position: absolute;
-            z-index: 2;
-            background-color: #99e2d0;
-            color: #008766;
-            left: 70%;
-            top: 0px;
-            padding: 9px 12px 8px 12px;
-            border-radius: 2px;
-            }
-            &__info{
-                display: flex;
-                justify-content: space-between;
-                padding-right: 6.9%;
-                padding-left: 3.9%;
-                @include padding-top-bottom(info);
-                
-                &__title p{
-                    margin: 7px;
+            &__name-icon{
+                @include flex-centre;
+                margin-top: 12px;
+                margin-bottom: 12px;
+                @include padding-top-bottom(type); 
+                background-color: #f6f6f6;
+                border-radius: 16px;
+                box-shadow: 5px 5px 20px #e6e6e6;
+                width: 100%;
+                span{
+                    color:#7e7e7e;
+                    padding-right: 25px;
+                    padding-left: 34px;
                 }
-
-                &__title__name p{
-                    font-weight: bolder;
+                p{
+                    width: 250px;
+                    font-weight: bold;
+                    margin:0px;
                 }
-                &__like{
+            }
+        }
+        }
+        
+    }
+}
+.blocR{
+    background-color: #f6f6f6;
+    @include flex-centre;
+    &__resto{
+        width: 1200px;
+        @media (max-width:991px){
+            width: 100%;
+            
+        }
+        a{
+            text-decoration: none;
+            color:black;
+        }
+        @include flex-centre;
+        flex-direction: column;
+        @include padding-top-bottom (resto);
+        &__title{
+        width: 100%;
+        margin-left: 0px;
+        padding-left: 7%;
+        
+        }
+        &__list{
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            &__type{
+                background-color: white;
+                width: 45%;
+                margin: 18px;
+                border-radius: 15px;
+                @media (max-width:765px){
+                    width: 85%;
+                    
+                }
+                &__img{
                     position: relative;
                 }
-                &__like span{
-                    position: absolute;
-                    z-index: 2;
-                    top: 23.5px;
-                    font-size: 23px;
-                    color: transparent;
-                   & :hover{
-                      color: $color-primary;
-                   }
-                }
 
-                &__like p{
-                    font-size: 23px;
+                &__img p{
+                position: absolute;
+                z-index: 2;
+                background-color: #99e2d0;
+                color: #008766;
+                left: 70%;
+                top: 0px;
+                padding: 9px 12px 8px 12px;
+                border-radius: 2px;
                 }
-                
+                &__info{
+                    display: flex;
+                    justify-content: space-between;
+                    padding-right: 6.9%;
+                    padding-left: 3.9%;
+                    @include padding-top-bottom(info);
+                    
+                    &__title p{
+
+                        margin: 7px;
+                        &__name p{
+                            font-weight: bolder;
+                        }
+                    }
+                    &__like{
+                        position: relative;
+                        span{
+                            position: absolute;
+                            z-index: 2;
+                            top: 23.5px;
+                            font-size: 23px;
+                            color: transparent;
+                            transition: transform 1000ms;
+                       
+                        & :hover{
+                            color: $color-primary;
+                        
+                        }
+                        }
+                        p{
+                            font-size: 23px;
+                        } 
+                    }
+                    
+                }
+            }       
             }
-        }       
+        img{
+            /*width: 336px;*/
+            width: 100%;
+            height: 177px;
+            object-fit: cover;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
         }
-    img{
-        /*width: 336px;*/
-        width: 100%;
-        height: 177px;
-        object-fit: cover;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
     }
 }
    
+.footer{
+
+    h1{
+      font-family:'Shrikhand', sans-serif;
+    }
+}
 
  
