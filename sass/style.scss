@@ -159,6 +159,10 @@ $color-tertiary: #99E2D0;
     @include flex-centre;
     &__resto{
         width: 1200px;
+        @include flex-centre;
+        flex-direction: column;
+        @include padding-top-bottom (resto);
+
         @media (max-width:991px){
             width: 100%;
             
@@ -167,9 +171,7 @@ $color-tertiary: #99E2D0;
             text-decoration: none;
             color:black;
         }
-        @include flex-centre;
-        flex-direction: column;
-        @include padding-top-bottom (resto);
+        
         &__title{
         width: 100%;
         margin-left: 0px;
@@ -211,36 +213,30 @@ $color-tertiary: #99E2D0;
                     padding-left: 3.9%;
                     @include padding-top-bottom(info);
                     
-                    &__title p{
-
+                    &__title{
+                        p{
                         margin: 7px;
+                        }
                         &__name p{
                             font-weight: bolder;
                         }
                     }
                     &__like{
-                        position: relative;
-                        span{
-                            position: absolute;
-                            z-index: 2;
-                            top: 23.5px;
-                            font-size: 23px;
-                            color: transparent;
-                            transition: transform 1000ms;
+
+                       @include flex-centre; 
+                       .bi bi-heart-fill{
+                        fill: url(full-color);
                        
-                        & :hover{
-                            color: $color-primary;
-                        
-                        }
-                        }
-                        p{
-                            font-size: 23px;
-                        } 
+                       }  
+                       .bi bi-heart{
+                        position: relative;
+                       }
                     }
-                    
+
+        
                 }
             }       
-            }
+        }
         img{
             /*width: 336px;*/
             width: 100%;

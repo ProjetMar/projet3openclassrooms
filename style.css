@@ -232,25 +232,19 @@ header {
 .blocR__resto__list__type__info__title p {
   margin: 7px;
 }
-.blocR__resto__list__type__info__title p__name p {
+.blocR__resto__list__type__info__title__name p {
   font-weight: bolder;
 }
 .blocR__resto__list__type__info__like {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.blocR__resto__list__type__info__like .bi bi-heart-fill {
+  fill: url(full-color);
+}
+.blocR__resto__list__type__info__like .bi bi-heart {
   position: relative;
-}
-.blocR__resto__list__type__info__like span {
-  position: absolute;
-  z-index: 2;
-  top: 23.5px;
-  font-size: 23px;
-  color: transparent;
-  transition: transform 1000ms;
-}
-.blocR__resto__list__type__info__like span :hover {
-  color: #9356DC;
-}
-.blocR__resto__list__type__info__like p {
-  font-size: 23px;
 }
 .blocR__resto img {
   /*width: 336px;*/
