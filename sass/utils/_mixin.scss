@@ -1,0 +1,12 @@
+@mixin flex-centre{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin padding-top-bottom ($val){
+    padding-top: map-get($padding-top, $val);
+    padding-bottom: map-get($padding-bottom, $val);
+}
+@mixin box-shadow($color: $color-shadow-footer, $amount: $val){
+    box-shadow: 2px 2px 10px 2px darken($color, 50%);
+}

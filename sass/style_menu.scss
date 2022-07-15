@@ -1,0 +1,40 @@
+*
+{
+    box-sizing: border-box;
+    font-family:'Roboto', sans-serif;
+}
+html{
+    font-size: 16px;
+}
+
+body
+{
+    max-width: 2000px;
+    margin: auto;
+}
+
+@import "./utils/variable";
+@import "./utils/maps";
+@import "./utils/mixin";
+@import "./layout/header";
+
+header {
+    display: flex;
+    position:relative;
+    .arrow-back{
+      @include flex-centre;
+      position: absolute;
+      left: 25px;
+      top: 40%;
+      font-size: 20px;
+    }
+}
+.img {
+    width: 100%;
+    height: 600px;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
