@@ -1,22 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap');
+@import "./base/bases";
 @import "./utils/variable";
 @import "./utils/maps";
 @import "./utils/mixin";
-*
-{
-    box-sizing: border-box;
-    font-family:'Roboto', sans-serif;
-}
-html{
-    font-size: 16px;
-}
 
-body
-{
-    max-width: 2000px;
-    margin: auto;
-}
 
 header{
     display: flex;
@@ -68,7 +56,7 @@ header{
     @include flex-centre;
     flex-direction: column;
     text-align: center;
-    background-color: #f6f6f6;
+    background-color: $color-background;
     @include padding-top-bottom(discover);
     
     h1{
@@ -79,11 +67,30 @@ header{
         background: linear-gradient($color-secondary, $color-primary);
         border-radius: 25px;
         box-shadow:5px 5px 20px #cfcfcf;
-        &:hover {
-            filter: brightness(120%);
-            @include box-shadow();
+        position: relative;
+        z-index: 1;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(lighten($color-secondary, 5%), lighten($color-primary, 5%));
+            border-radius: 25px;
+            box-shadow: 5px 5px 20px #cfcfcf;
+            opacity: 0;
+            z-index: -1;
+            transition: opacity box-shadow 250ms;
         }
     
+        &:hover {
+            &::after{
+                opacity: 1;
+                @include box-shadow();
+            }
+        }
+        
     }
 }
 .blocF{
@@ -128,7 +135,7 @@ header{
                 margin-top: 12px;
                 margin-bottom: 12px;
                 @include padding-top-bottom(type); 
-                background-color: #f6f6f6;
+                background-color: $color-background;
                 border-radius: 16px;
                 box-shadow: 5px 5px 20px #e6e6e6;
                 width: 100%;
@@ -156,7 +163,7 @@ header{
     }
 }
 .blocR{
-    background-color: #f6f6f6;
+    background-color: $color-background;
     @include flex-centre;
     &__resto{
         width: 1200px;
@@ -239,7 +246,6 @@ header{
                         top:-5px;
                         z-index: 2;
                         color:transparent;
-                        transform-origin: 50% 50%;
                         cursor: pointer;
                         p{
                             font-size: 25px;
@@ -255,12 +261,21 @@ header{
                         }
  
                        }
-                       @keyframes progress-bar{
+                       @keyframes progress-bar {
                         0% {
-                            transform: scale(0);
+                            transform: scaleY(0);
+                        }
+                        17% {
+                            transform: scaleY(.18);
+                        }
+                        24% {
+                            transform: scaleY(.4);
+                        }
+                        46% {
+                            transform: scaleY(.81);
                         }
                         100% {
-                            transform: scale(1);
+                            transform: scaleY(1);
                         }
                     }
                        

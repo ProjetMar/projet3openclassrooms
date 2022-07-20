@@ -86,9 +86,25 @@ header {
   background: linear-gradient(#FF79DA, #9356DC);
   border-radius: 25px;
   box-shadow: 5px 5px 20px #cfcfcf;
+  position: relative;
+  z-index: 1;
 }
-.discover__btn:hover {
-  filter: brightness(120%);
+.discover__btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(#ff93e1, #a16be0);
+  border-radius: 25px;
+  box-shadow: 5px 5px 20px #cfcfcf;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity box-shadow 250ms;
+}
+.discover__btn:hover::after {
+  opacity: 1;
   box-shadow: 2px 2px 10px 2px #505050;
 }
 
@@ -265,7 +281,6 @@ header {
   top: -5px;
   z-index: 2;
   color: transparent;
-  transform-origin: 50% 50%;
   cursor: pointer;
 }
 .blocR__resto__list__type__info__like span p {
@@ -281,10 +296,19 @@ header {
 }
 @keyframes progress-bar {
   0% {
-    transform: scale(0);
+    transform: scaleY(0);
+  }
+  17% {
+    transform: scaleY(0.18);
+  }
+  24% {
+    transform: scaleY(0.4);
+  }
+  46% {
+    transform: scaleY(0.81);
   }
   100% {
-    transform: scale(1);
+    transform: scaleY(1);
   }
 }
 .blocR__resto img {
