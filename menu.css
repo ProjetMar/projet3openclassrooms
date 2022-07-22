@@ -224,36 +224,61 @@ header .arrow-back {
   grid-gap: 15px;
 }
 .menu__bloc__grid__starter__list__type, .menu__bloc__grid__dish__list__type, .menu__bloc__grid__dessert__list__type {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  cursor: pointer;
+}
+.menu__bloc__grid__starter__list__type__title-price, .menu__bloc__grid__dish__list__type__title-price, .menu__bloc__grid__dessert__list__type__title-price {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: white;
   border-radius: 15px;
   padding: 9px 21px 9px 10px;
+  white-space: nowrap;
   overflow: hidden;
   width: 100%;
+  transition: padding 1000ms ease-in-out;
 }
-.menu__bloc__grid__starter__list__type__title, .menu__bloc__grid__dish__list__type__title, .menu__bloc__grid__dessert__list__type__title {
-  width: 100%;
-  position: relative;
-  max-width: 290px;
+.menu__bloc__grid__starter__list__type__title-price:hover, .menu__bloc__grid__dish__list__type__title-price:hover, .menu__bloc__grid__dessert__list__type__title-price:hover {
+  padding: 9px 81px 9px 10px;
 }
-.menu__bloc__grid__starter__list__type__title__name p, .menu__bloc__grid__dish__list__type__title__name p, .menu__bloc__grid__dessert__list__type__title__name p {
-  font-weight: bold;
-}
-.menu__bloc__grid__starter__list__type__title p, .menu__bloc__grid__dish__list__type__title p, .menu__bloc__grid__dessert__list__type__title p {
-  margin: 3px;
-}
-.menu__bloc__grid__starter__list__type__title__subname, .menu__bloc__grid__dish__list__type__title__subname, .menu__bloc__grid__dessert__list__type__title__subname {
+.menu__bloc__grid__starter__list__type__title-price__title, .menu__bloc__grid__dish__list__type__title-price__title, .menu__bloc__grid__dessert__list__type__title-price__title {
   overflow: hidden;
   white-space: nowrap;
 }
-.menu__bloc__grid__starter__list__type__title__subname p, .menu__bloc__grid__dish__list__type__title__subname p, .menu__bloc__grid__dessert__list__type__title__subname p {
+.menu__bloc__grid__starter__list__type__title-price__title__name p, .menu__bloc__grid__dish__list__type__title-price__title__name p, .menu__bloc__grid__dessert__list__type__title-price__title__name p {
+  font-weight: bold;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.menu__bloc__grid__starter__list__type__price, .menu__bloc__grid__dish__list__type__price, .menu__bloc__grid__dessert__list__type__price {
+.menu__bloc__grid__starter__list__type__title-price__title p, .menu__bloc__grid__dish__list__type__title-price__title p, .menu__bloc__grid__dessert__list__type__title-price__title p {
+  margin: 3px;
+}
+.menu__bloc__grid__starter__list__type__title-price__title__subname p, .menu__bloc__grid__dish__list__type__title-price__title__subname p, .menu__bloc__grid__dessert__list__type__title-price__title__subname p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu__bloc__grid__starter__list__type__title-price__price, .menu__bloc__grid__dish__list__type__title-price__price, .menu__bloc__grid__dessert__list__type__title-price__price {
   font-weight: bold;
+}
+.menu__bloc__grid__starter__list__type .validation-bloc, .menu__bloc__grid__dish__list__type .validation-bloc, .menu__bloc__grid__dessert__list__type .validation-bloc {
+  display: none;
+  position: absolute;
+  right: 0px;
+  background-color: #99E2D0;
+  color: white;
+  width: 60px;
+  height: 100%;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0px 12px 12px 0px;
+  transition: opacity 0ms ease-in-out;
 }
 .menu__bloc a {
   text-decoration: none;

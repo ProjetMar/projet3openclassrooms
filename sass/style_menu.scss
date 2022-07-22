@@ -123,44 +123,71 @@ header {
                     display: grid;
                     grid-gap: 15px; 
                     &__type{
+                        position: relative;
                         display: flex;
-                        justify-content: space-between;
                         align-items: center;
-                        background-color: white;
-                        border-radius: 15px;
-                        padding: 9px 21px 9px 10px;
-                        overflow: hidden;
                         width: 100%;
-                        
-                        &__title{
+                        overflow: hidden;
+                        cursor: pointer;
+
+                        &__title-price{
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            background-color: white;
+                            border-radius: 15px;
+                            padding: 9px 21px 9px 10px;
+                            white-space: nowrap;
+                            overflow: hidden;
                             width: 100%;
-                            position: relative;
-                            max-width: 290px;
-    
-                            &__name p{
-                                font-weight: bold;
+                            transition: padding 1000ms ease-in-out;
+                            &:hover{
+                                padding: 9px 81px 9px 10px;
                             }
-                            p{
-                                margin: 3px;
-                            }
-                            &__subname{
-            
+                            
+                            &__title{
                                 overflow: hidden;
                                 white-space: nowrap;
-                                
-                                p{
+                                &__name p{
+                                    font-weight: bold;
                                     overflow: hidden;
                                     text-overflow: ellipsis;
                                 }
-                
+                                p{
+                                    margin: 3px;
+                                    
+                                }
+                                &__subname{
+                                    
+                                    p{
+                                        overflow: hidden;
+                                        text-overflow: ellipsis;
+                                    }
+                    
+                                }
+                                
                             }
                             
+                            &__price{
+                                font-weight: bold;
+                            }
                         }
-                          
-                        &__price{
-                            font-weight: bold;
+                        .validation-bloc{
+                            display: none;
+                            position: absolute;
+                            right: 0px;
+                            background-color: $color-tertiary;
+                            color: white;
+                            width: 60px;
+                            height: 100%;
+                            font-size: 20px;
+                            @include flex-centre;
+                            border-radius: 0px 12px 12px 0px;
+                            transition: opacity 0ms ease-in-out;
+                            
                         }
                     }
+                    
                 }
             }
         }
