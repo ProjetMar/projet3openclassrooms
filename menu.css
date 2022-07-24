@@ -185,10 +185,10 @@ header .arrow-back {
 }
 @keyframes progress-bar {
   0% {
-    transform: scale(0);
+    transform: scaleY(0);
   }
   100% {
-    transform: scale(1);
+    transform: scaleY(1);
   }
 }
 .menu__bloc__grid {
@@ -229,7 +229,15 @@ header .arrow-back {
   align-items: center;
   width: 100%;
   overflow: hidden;
+  transform-origin: 50% 0%;
+  animation: opacity-bar 3s both;
   cursor: pointer;
+}
+.menu__bloc__grid__starter__list__type:hover > .validation-bloc, .menu__bloc__grid__dish__list__type:hover > .validation-bloc, .menu__bloc__grid__dessert__list__type:hover > .validation-bloc {
+  transform: scaleX(1);
+}
+.menu__bloc__grid__starter__list__type:hover > .validation-bloc i, .menu__bloc__grid__dish__list__type:hover > .validation-bloc i, .menu__bloc__grid__dessert__list__type:hover > .validation-bloc i {
+  transform: rotate(0deg);
 }
 .menu__bloc__grid__starter__list__type__title-price, .menu__bloc__grid__dish__list__type__title-price, .menu__bloc__grid__dessert__list__type__title-price {
   display: flex;
@@ -241,7 +249,7 @@ header .arrow-back {
   white-space: nowrap;
   overflow: hidden;
   width: 100%;
-  transition: padding 1000ms ease-in-out;
+  transition: padding 500ms ease-in-out;
 }
 .menu__bloc__grid__starter__list__type__title-price:hover, .menu__bloc__grid__dish__list__type__title-price:hover, .menu__bloc__grid__dessert__list__type__title-price:hover {
   padding: 9px 81px 9px 10px;
@@ -266,19 +274,24 @@ header .arrow-back {
   font-weight: bold;
 }
 .menu__bloc__grid__starter__list__type .validation-bloc, .menu__bloc__grid__dish__list__type .validation-bloc, .menu__bloc__grid__dessert__list__type .validation-bloc {
-  display: none;
+  transform: scaleX(0);
   position: absolute;
   right: 0px;
   background-color: #99E2D0;
   color: white;
-  width: 60px;
   height: 100%;
-  font-size: 20px;
+  font-size: 25px;
+  width: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 0px 12px 12px 0px;
-  transition: opacity 0ms ease-in-out;
+  transform-origin: 100% 50%;
+  transition: transform 500ms ease-in-out;
+}
+.menu__bloc__grid__starter__list__type .validation-bloc i, .menu__bloc__grid__dish__list__type .validation-bloc i, .menu__bloc__grid__dessert__list__type .validation-bloc i {
+  transform: rotate(-360deg);
+  transition: transform 500ms ease-in-out;
 }
 .menu__bloc a {
   text-decoration: none;
@@ -316,6 +329,52 @@ header .arrow-back {
 .menu__bloc__btn:hover::after {
   opacity: 1;
   box-shadow: 2px 2px 10px 2px #505050;
+}
+
+@keyframes opacity-bar {
+  0% {
+    scale: 0;
+    opacity: 0;
+  }
+  100% {
+    scale: 1;
+    opacity: 1;
+  }
+}
+.choice-1 {
+  animation-delay: 0.2s;
+}
+
+.choice-2 {
+  animation-delay: 0.4s;
+}
+
+.choice-3 {
+  animation-delay: 0.6s;
+}
+
+.choice-4 {
+  animation-delay: 0.8s;
+}
+
+.choice-5 {
+  animation-delay: 1s;
+}
+
+.choice-6 {
+  animation-delay: 1.2s;
+}
+
+.choice-7 {
+  animation-delay: 1.4s;
+}
+
+.choice-8 {
+  animation-delay: 1.6s;
+}
+
+.choice-9 {
+  animation-delay: 1.8s;
 }
 
 /*# sourceMappingURL=menu.css.map */

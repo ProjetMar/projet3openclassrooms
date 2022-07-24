@@ -82,13 +82,17 @@ header {
                     }
 
                 }
-                @keyframes progress-bar{
-                 0% {
-                     transform: scale(0);
-                }
-                 100% {
-                     transform: scale(1);
-                }
+                @keyframes progress-bar {
+
+                    0% {
+                        transform: scaleY(0); 
+                    }
+                    
+                    100% {
+                        transform: scaleY(1);
+                        
+                    }
+
                 }
                 
             }
@@ -122,13 +126,24 @@ header {
                 &__list{
                     display: grid;
                     grid-gap: 15px; 
+                    
                     &__type{
                         position: relative;
                         display: flex;
                         align-items: center;
                         width: 100%;
                         overflow: hidden;
+                        transform-origin: 50% 0%;
+                        animation: opacity-bar 3s both;
+                   
                         cursor: pointer;
+                        &:hover > .validation-bloc{
+                            transform: scaleX(1);
+                            i{
+                                transform: rotate(0deg);
+                            }
+
+                        }
 
                         &__title-price{
                             display: flex;
@@ -140,7 +155,7 @@ header {
                             white-space: nowrap;
                             overflow: hidden;
                             width: 100%;
-                            transition: padding 1000ms ease-in-out;
+                            transition: padding 500ms ease-in-out;
                             &:hover{
                                 padding: 9px 81px 9px 10px;
                             }
@@ -173,17 +188,22 @@ header {
                             }
                         }
                         .validation-bloc{
-                            display: none;
+                            transform: scaleX(0); 
                             position: absolute;
                             right: 0px;
                             background-color: $color-tertiary;
                             color: white;
-                            width: 60px;
                             height: 100%;
-                            font-size: 20px;
+                            font-size: 25px;
+                            width: 60px;
                             @include flex-centre;
-                            border-radius: 0px 12px 12px 0px;
-                            transition: opacity 0ms ease-in-out;
+                            border-radius: 0px 12px 12px 0px;  
+                            transform-origin: 100% 50%;
+                            transition: transform 500ms ease-in-out;     
+                            i {
+                                transform: rotate(-360deg);
+                                transition: transform 500ms ease-in-out;
+                            }    
                             
                         }
                     }
@@ -234,3 +254,19 @@ header {
 
 
 }
+@keyframes opacity-bar {
+    0%{
+        scale: 0;
+        opacity: 0;
+    }
+    100%{
+        scale: 1;
+        opacity: 1;
+    }
+}
+@for $i from 1 through 9 {
+    .choice-#{$i} {
+        animation-delay: 0.2s*$i;
+    }
+}
+
