@@ -60,11 +60,10 @@ header {
                 @include flex-centre; 
                 position: relative;
                 p{
-                    font-size: 22.5px;
+                    font-size: 22px;
                 }
                 span  {
                  position:absolute;
-                 top:-5px;
                  z-index: 2;
                  color:transparent;
                  transform-origin: 50% 50%;
@@ -134,7 +133,7 @@ header {
                         width: 100%;
                         overflow: hidden;
                         transform-origin: 50% 0%;
-                        animation: opacity-bar 3s both;
+                        animation: opacity-bar 2s both;
                    
                         cursor: pointer;
                         &:hover > .validation-bloc{
@@ -163,8 +162,8 @@ header {
                             &__title{
                                 overflow: hidden;
                                 white-space: nowrap;
-                                &__name p{
-                                    font-weight: bold;
+                                &__name h2{
+                                    
                                     overflow: hidden;
                                     text-overflow: ellipsis;
                                 }
@@ -264,7 +263,7 @@ header {
         opacity: 1;
     }
 }
-@for $i from 1 through 9 {
+@for $i from 1 through 10 {
     .choice-#{$i} {
         animation-delay: 0.2s*$i;
     }
