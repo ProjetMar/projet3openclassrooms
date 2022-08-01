@@ -1,0 +1,26 @@
+.like{
+
+    @include flex-centre; 
+    position: relative;
+    p{font-size: 22px;
+     
+     }
+    span  {
+         position:absolute;
+         z-index: 2;
+         color:transparent;
+         cursor: pointer;
+         p{
+             font-size: 25px;
+         }
+         &:hover{
+             transform: scaleY(1);
+             animation-name: progress-bar;
+             animation-duration: 500ms;
+             background: linear-gradient(to right bottom, $color-primary, $color-secondary);
+             -webkit-background-clip: text;
+                     background-clip:text;
+                 }
+     }
+
+ }

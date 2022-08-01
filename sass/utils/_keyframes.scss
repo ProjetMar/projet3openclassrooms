@@ -1,0 +1,40 @@
+@keyframes spin {
+    0% { transform: rotate(0deg); visibility: visible; opacity: 1;}
+    80%{opacity: 1;}
+    100% { transform: rotate(360deg); opacity: 0;}
+  }
+@keyframes loader{
+    0%{visibility: visible;
+    opacity: 0.9;}
+    80%{opacity: 0.9;}
+    100%{opacity:0; 
+        visibility: hidden;}
+
+}
+@keyframes progress-bar {
+    0% {
+        transform: scaleY(0);
+    }
+    17% {
+        transform: scaleY(.18);
+    }
+    24% {
+        transform: scaleY(.4);
+    }
+    46% {
+        transform: scaleY(.81);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+@keyframes opacity-bar {
+    0%{
+        scale: 0;
+        opacity: 0;
+    }
+    100%{
+        scale: 1;
+        opacity: 1;
+    }
+}
