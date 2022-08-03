@@ -39,7 +39,7 @@
         &__title-like{
             display: flex;
             justify-content: space-between;
-            &__title h1{
+            &__title h3{
                 font-family:'Shrikhand', sans-serif;
             }
            
@@ -110,7 +110,7 @@
                             &__title{
                                 overflow: hidden;
                                 white-space: nowrap;
-                                &__name h2{
+                                &__name h3{
                                     
                                     overflow: hidden;
                                     text-overflow: ellipsis;

@@ -10,9 +10,8 @@
          z-index: 2;
          color:transparent;
          cursor: pointer;
-         p{
-             font-size: 25px;
-         }
+         font-size: 25px;
+        
          &:hover{
              transform: scaleY(1);
              animation-name: progress-bar;

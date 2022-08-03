@@ -14,7 +14,7 @@ body {
   margin: auto;
 }
 
-h2 {
+h3 {
   font-size: 1rem;
   font-weight: bold;
 }
@@ -107,12 +107,12 @@ h2 {
   text-decoration: none;
   color: white;
 }
-.footer h1 {
+.footer h2 {
   font-family: "Shrikhand", sans-serif;
   margin: 0px;
   padding-bottom: 14px;
 }
-.footer h1:hover {
+.footer h2:hover {
   text-decoration: underline;
 }
 .footer__bloc {
@@ -207,8 +207,6 @@ h2 {
   z-index: 2;
   color: transparent;
   cursor: pointer;
-}
-.like span p {
   font-size: 25px;
 }
 .like span:hover {
@@ -295,7 +293,7 @@ h2 {
   text-decoration: none;
   color: white;
 }
-.discover h1 {
+.discover h3 {
   margin: 0px;
 }
 
@@ -375,7 +373,7 @@ h2 {
 .blocF__function__list__type__name-icon span:hover {
   color: #9356DC;
 }
-.blocF__function__list__type__name-icon h2 {
+.blocF__function__list__type__name-icon h3 {
   width: 250px;
   margin: 0px;
 }
@@ -514,7 +512,7 @@ h2 {
   display: flex;
   justify-content: space-between;
 }
-.menu__bloc__title-like__title h1 {
+.menu__bloc__title-like__title h3 {
   font-family: "Shrikhand", sans-serif;
 }
 .menu__bloc__grid {
@@ -584,7 +582,7 @@ h2 {
   overflow: hidden;
   white-space: nowrap;
 }
-.menu__bloc__grid__starter__list__type__title-price__title__name h2, .menu__bloc__grid__dish__list__type__title-price__title__name h2, .menu__bloc__grid__dessert__list__type__title-price__title__name h2 {
+.menu__bloc__grid__starter__list__type__title-price__title__name h3, .menu__bloc__grid__dish__list__type__title-price__title__name h3, .menu__bloc__grid__dessert__list__type__title-price__title__name h3 {
   overflow: hidden;
   text-overflow: ellipsis;
 }
