@@ -65,11 +65,9 @@ h3 {
 }
 @keyframes opacity-bar {
   0% {
-    scale: 0;
     opacity: 0;
   }
   100% {
-    scale: 1;
     opacity: 1;
   }
 }
@@ -186,7 +184,7 @@ h3 {
   box-shadow: 5px 5px 20px #cfcfcf;
   opacity: 0;
   z-index: -1;
-  transition: opacity box-shadow 250ms;
+  transition: all 250ms;
 }
 .btn:hover::after {
   opacity: 1;
@@ -558,6 +556,7 @@ h3 {
   cursor: pointer;
 }
 .menu__bloc__grid__starter__list__type:hover > .validation-bloc, .menu__bloc__grid__dish__list__type:hover > .validation-bloc, .menu__bloc__grid__dessert__list__type:hover > .validation-bloc {
+  opacity: 1;
   transform: scaleX(1);
 }
 .menu__bloc__grid__starter__list__type:hover > .validation-bloc i, .menu__bloc__grid__dish__list__type:hover > .validation-bloc i, .menu__bloc__grid__dessert__list__type:hover > .validation-bloc i {
@@ -598,6 +597,7 @@ h3 {
 }
 .menu__bloc__grid__starter__list__type .validation-bloc, .menu__bloc__grid__dish__list__type .validation-bloc, .menu__bloc__grid__dessert__list__type .validation-bloc {
   transform: scaleX(0);
+  opacity: 0;
   position: absolute;
   right: 0px;
   background-color: #99E2D0;

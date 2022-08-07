@@ -22,7 +22,7 @@
         box-shadow: 5px 5px 20px #cfcfcf;
         opacity: 0;
         z-index: -1;
-        transition: opacity box-shadow 250ms;
+        transition: all 250ms;
     }
 
     &:hover {

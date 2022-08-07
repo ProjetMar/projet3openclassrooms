@@ -80,11 +80,12 @@
                         align-items: center;
                         width: 100%;
                         overflow: hidden;
-                        transform-origin: 50% 0%;
+                        transform-origin: 50% 0%; 
                         animation: opacity-bar 2s both;
                    
                         cursor: pointer;
                         &:hover > .validation-bloc{
+                            opacity: 1;
                             transform: scaleX(1);
                             i{
                                 transform: rotate(0deg);
@@ -136,6 +137,7 @@
                         }
                         .validation-bloc{
                             transform: scaleX(0); 
+                            opacity: 0;
                             position: absolute;
                             right: 0px;
                             background-color: $color-tertiary;
