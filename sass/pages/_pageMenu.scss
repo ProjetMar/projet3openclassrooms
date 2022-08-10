@@ -21,6 +21,13 @@
         }
     }
 }
+.object-fit{
+    img{
+        @media (max-width:765px) {
+            object-fit: cover;
+        }
+    }
+}
 .menu{
     @include flex-centre;
     @include white-background;
