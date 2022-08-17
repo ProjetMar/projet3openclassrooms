@@ -19,7 +19,7 @@
         left: 0;
         background: linear-gradient(lighten($color-secondary, 5%), lighten($color-primary, 5%));
         border-radius: 25px;
-        box-shadow: 5px 5px 20px #cfcfcf;
+        @include box-shadow();
         opacity: 0;
         z-index: -1;
         transition: all 250ms;
@@ -28,7 +28,6 @@
     &:hover {
         &::after{
             opacity: 1;
-            @include box-shadow();
         }
     }
     
